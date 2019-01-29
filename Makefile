@@ -20,3 +20,10 @@ tarout.o: tarout.c tar.h
 util.o: util.c util.h
 
 clean:;rm -f *.o mtftar
+
+ifeq ($(PREFIX),)
+    PREFIX := /usr/local
+endif
+
+install: mtftar
+    install -m 644 mtftar $(DESTDIR)$(PREFIX)/bin
