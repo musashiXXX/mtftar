@@ -26,4 +26,4 @@ ifeq ($(PREFIX),)
 endif
 
 install: mtftar
-    install -m 644 mtftar $(DESTDIR)$(PREFIX)/bin
+    install -m 655 mtftar $(DESTDIR)$(PREFIX)/bin
